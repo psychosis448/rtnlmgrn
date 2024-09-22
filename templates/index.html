@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<article>
+    <h1>{{ section.title }}</h1>
+
+    <section class="epigraph">
+        <figure>
+            <blockquote cite="https://www.soenkeahrens.de/en/takesmartnotes">
+                Learning, thinking and writing should not be about accumulating knowledge, but about becoming a different person with a different way of thinking. This is done by questioning one’s own thinking routines in the light of new experiences and facts.
+            </blockquote>
+            <figcaption>&mdash; Sönke Ahrens, <a href="https://www.soenkeahrens.de/en/takesmartnotes"><cite>How To Take Smart Notes</cite></a></figcaption>
+        </figure>
+
+    </section>
+
+    {% set section = get_section(path="zettelkasten/_index.md") %}
+
+    <section>
+        <ul class="list-entry">
+            {% for page in section.pages %}
+            <li><a href="{{ page.permalink | safe }}">{{ page.title | lower | replace(from=' ', to='-') }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+
+</article>
+
+{% endblock %}

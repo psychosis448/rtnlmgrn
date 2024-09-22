@@ -1,0 +1,12 @@
+/* TODO: investigate why it throws error in scss... */
+main a[href]:not(:where(
+  [href^="#"],
+  [href^="/"]:not([href^="//"]),
+  [href^=".."],
+  [href*="//rtnlmgrn.net"],
+  [href*="//127.0.0.1:1111"],
+  [class^="i-logo"]
+)):after {
+  content: ' ';
+}
+

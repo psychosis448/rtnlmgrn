@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock title%}</title>
+    {% block css %}
+    <link rel="stylesheet" href="{{ get_url(path='index.css', trailing_slash=false) | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='links.css', trailing_slash=false) | safe }}">
+    {% endblock css %}
+    {% block atom %}
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+    {% endblock atom %}
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="navigation">
+                <li>{{ config.title | safe }}</li>
+                <li><a href="/">/</a></li>
+                <li><a href="/about">/about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        {% block content %} {% endblock %}
+    </main>
+
+    <!-- <aside class="aside">
+        <section>
+
+        </section>
+    </aside> -->
+
+    <footer>
+        <hr>
+        <section>
+            <ul>
+                <li>
+                    by psychosis448
+                    <a href="https://github.com/psychosis448" rel="noopener noreferrer" class="i-logo"><img
+                        src="{{ get_url(path='logo-github.svg', trailing_slash=false) | safe }}" alt="github logo"></a>
+                    <a href="https://gitlab.com/psychosis448" rel="noopener noreferrer" class="i-logo"><img
+                        src="{{ get_url(path='logo-gitlab.svg', trailing_slash=false) | safe }}" alt="gitlab logo"></a>
+                    | made with zola
+                    <a href="https://github.com/getzola" rel="noopener noreferrer" class="i-logo">
+                        <img src="{{ get_url(path='power-outline.svg', trailing_slash=false) | safe }}"
+                            alt="power button"></a>
+                </li>
+            </ul>
+
+        </section>
+    </footer>
+
+    <script>
+        window.onload = () => {
+            const current = location.pathname.split('/')[1];
+            const navLinks = document.getElementById('navigation').getElementsByTagName('a');
+
+            for (let link of navLinks) {
+                const section = link.pathname.split('/')[1];
+                console.log(section, current)
+
+                if (section === current || (section === "" && current === "zettelkasten")) {
+                    link.className += 'active';
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

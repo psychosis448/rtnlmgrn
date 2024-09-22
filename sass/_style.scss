@@ -1,0 +1,159 @@
+@import '_style_quotes.scss';
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.8em; }
+h6 { font-size: 0.7em; }
+
+hr {
+    border: 0 none;
+    border-top: 2px solid var(--border);
+}
+
+pre {
+    // https://www.getzola.org/documentation/content/syntax-highlighting/#styling-codeblocks
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+    word-wrap: normal;
+    word-break: break-word;
+}
+
+.box {
+    border-radius: 5px;
+    padding: 0.4rem;
+}
+
+.info {
+    background-color: color-mix(in srgb, var(--gold), transparent 80%);
+    border: 1px solid var(--gold);
+    border-left: 4px solid var(--gold);
+}
+
+.zola-anchor {
+    visibility: hidden;
+}
+
+h2:hover,h3:hover,h4:hover,h5:hover,h6:hover {
+    .zola-anchor {
+        visibility: visible;
+    }
+}
+
+nav {
+    font-size: 2rem;
+
+    ul {
+        margin: 0;
+
+        li {
+            display: inline;
+            list-style: none;
+        }
+    }
+
+    a {
+        color: var(--fg-dim);
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: var(--rust);
+    }
+
+    a.active {
+        color: var(--red);
+    }
+}
+
+footer {
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {
+    nav a:hover {
+        color: var(--rust);
+    }
+}
+
+article {
+    a {
+        color: var(--blue);
+    }
+
+    a:hover {
+        color: var(--cyan);
+    }
+
+    a:visited {
+        color: var(--indigo);
+    }
+
+    a:visited:hover {
+        color: var(--slate);
+    }
+}
+
+.notfound {
+    text-align: center;
+}
+
+.list-entry {
+    list-style: '- ';
+}
+
+.entry-metadata {
+    text-align: right;
+    opacity: 0.9;
+
+    ul {
+        list-style: none;
+        li {
+            padding-left: 0.5rem;
+        }
+    }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (min-width: 800px) {
+    .entry-metadata {
+        ul {
+            li {
+                display: inline;
+            }
+        }
+    }
+
+    .image {
+        width: 70%;
+        height: auto;
+    }
+}
+
+.i-logo {
+    img {
+        height: 1rem;
+    }
+
+    img:hover {
+        filter: invert(60%);
+        transform: scale(1.1);
+    }
+}
+
+.large {
+  img {
+    height: 2rem;
+  }
+}

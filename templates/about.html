@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+
+    {{ page.content | safe }}
+
+    <section>
+        <h1>psychosis448</h1>
+        <p>
+        <img class="image" src="{{ get_url(path='portrait.png') }}" alt="Portrait of psychosis448 sitting in front of a fishtank" />
+        <a href="https://github.com/psychosis448" rel="noopener noreferrer" class="i-logo large"><img
+            src="{{ get_url(path='logo-github.svg', trailing_slash=false) | safe }}" alt="github logo"></a>
+        <a href="https://gitlab.com/psychosis448" rel="noopener noreferrer" class="i-logo large"><img
+            src="{{ get_url(path='logo-gitlab.svg', trailing_slash=false) | safe }}" alt="gitlab logo"></a>
+        </p>
+
+        <p>
+        Currently working as a Systems Engineer with with a focus on Platform
+        Engineering on Kubernetes with ArgoCD and Helm, and IaaC with Terraform.
+        Wider knowledge and hands-on experience with a lot of commonly used
+        tooling within the cloud-native ecosystem.
+        </p>
+
+        <p>
+        Deep interest in Nix, WebAssembly and infrastructure automation.
+        Proficiency in Go, JavaScript, Python, F# and some Rust.
+        </p>
+
+        <p>
+        Previously worked as a Cloud Engineer, helping customers to
+        get their on-premise Kubernetes journey started. Developed the self-service
+        DevOps journey for a bigger private cloud project.  
+        Also worked as a Fullstack Web Developer with a focus on interactive data
+        visualizations.
+        </p>
+    </section>
+
+</article>
+{% endblock %}
+

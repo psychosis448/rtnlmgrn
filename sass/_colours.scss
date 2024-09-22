@@ -1,0 +1,79 @@
+// NOTE: color theme is based on modus-themes:
+// https://protesilaos.com/emacs/modus-themes-colors
+
+@media (prefers-color-scheme: dark) {
+    /* Dark theme styles go here */
+    :root {
+        --bg-main: #0a0a0a;
+        --bg-dim: #1e1e1e;
+        --fg-main: #f0f0f0;
+        --fg-dim: #989898;
+        --border: #9f9f9f;
+        --red: #ff5f59;
+        --green: #44bc44;
+        --yellow: #d0bc00;
+        --blue: #2fafff;
+        --magenta: #feacd0;
+        --cyan: #00d3d0;
+        --rust:	#db7b5f;
+        --gold: #c0965b;
+        --olive: #9cbd6f;
+        --slate: #76afbf;
+        --indigo: #9099d9;
+        --maroon: #cf7fa7;
+        --pink:	#d09dc0;
+    }
+
+    body {
+        font-weight: 350;
+    }
+
+    img {
+        filter: brightness(.8) contrast(1.2);
+    }
+
+    .i-logo {
+        img {
+            filter: invert(100%);
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    /* Light theme styles go here */
+    :root {
+        --bg-main: #f0f0f0;
+        --bg-dim: #f0f0f0;
+        --fg-main: #0a0a0a;
+        --fg-dim: #595959;
+        --border: #646464;
+        --red: #a60000;
+        --green: #006800;
+        --yellow: #6f5500;
+        --blue: #0031a9;
+        --magenta: #721045;
+        --cyan: #005e8b;
+        --rust:	#8a290f;
+        --gold: #80601f;
+        --olive: #56692d;
+        --slate: #2f3f83;
+        --indigo: #4a3a8a;
+        --maroon: #731c52;
+        --pink:	#7b435c;
+    }
+
+    body {
+        font-weight: 400;
+
+    }
+
+    .i-logo {
+        img {
+            filter: invert(0%);
+        }
+    }
+
+    .logo {
+        filter: invert(100%);
+    }
+}

@@ -13,7 +13,7 @@
 > der Sprache versteh ich schlecht. Vielleicht den Ort mit den Worten gewechselt
 > haben und schließlich durch das Verstehen woanders stehen?
 
--- [_Rave_, Rainald Goetz (1998)](https://www.suhrkamp.de/rights/book/rainald-goetz-rave-fr-9783518409541).
+&mdash; [Rave, Rainald Goetz (1998)](https://www.suhrkamp.de/rights/book/rainald-goetz-rave-fr-9783518409541).
 
 ## Run & Build
 

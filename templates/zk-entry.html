@@ -5,11 +5,11 @@
   <div class="entry-metadata">
     <ul>
       {% for author in page.authors %}
-      <li> {{ author }}</li>
+          <li><i class="nf nf-oct-person"></i> {{ author }}</li>
       {% endfor %}
-      <li> {{ page.date }}</li>
+      <li><i class="nf nf-oct-pencil"></i> {{ page.date }}</li>
       {% if page.updated %}
-      <li>󰚰 {{ page.updated }}</li>
+          <li><i class="nf nf-md-update"></i> {{ page.updated }}</li>
       {% endif %}
     </ul>
   </div>
@@ -17,7 +17,7 @@
   {{ page.content | safe }} {% if page.extra.references %}
   <section>
     <h2>References</h2>
-    <ul>
+    <ul class="list-entry">
       {% for reference in page.extra.references %}
       <li>
         <a href="{{ reference.link }}">{{ reference.title }}</a>
@@ -29,7 +29,7 @@
   {% endif %} {% if page.extra.folgezettel %}
   <section>
     <h2>Folgezettel</h2>
-    <ul>
+    <ul class="list-entry">
       {% for folgezettel in page.extra.folgezettel | sort %}
       <li>
         {% set page = get_page(path="zettelkasten/" ~ folgezettel ~ ".md") %}

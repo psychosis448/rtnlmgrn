@@ -3,14 +3,17 @@
     c.f. https://en.wikipedia.org/wiki/Epigraph_(literature)
 -->
 <section class="epigraph">
-    <figure>
-        <blockquote cite="{{ link }}">
-            {{ quote }}
-        </blockquote>
-        {% if p and year %}
-            <figcaption>&mdash; {{ author }}, <a href="{{link }}"<cite>{{ title}}</cite></a>, <time datetime="{{ year }}">{{ year }}</time>, {{ p }}</figcaption>
-        {% else %}
-            <figcaption>&mdash; {{ author }}, <a href="{{ link }}"><cite>{{ title }}</cite></a></figcaption>
-        {% endif %}
-    </figure>
+  <figure>
+    <blockquote cite="{{ link }}">{{ quote }}</blockquote>
+    {% if p and year %}
+    <figcaption>
+      &mdash; {{ author }}, <a href="{{link }}"><cite>{{ title}}</cite></a
+      >, <time datetime="{{ year }}">{{ year }}</time>, {{ p }}
+    </figcaption>
+    {% else %}
+    <figcaption>
+      &mdash; {{ author }}, <a href="{{ link }}"><cite>{{ title }}</cite></a>
+    </figcaption>
+    {% endif %}
+  </figure>
 </section>

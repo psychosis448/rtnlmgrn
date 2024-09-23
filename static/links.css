@@ -7,6 +7,5 @@ main a[href]:not(:where(
   [href*="//127.0.0.1:1111"],
   [class^="i-logo"]
 )):after {
-  content: ' ';
+  content: " ";
 }
-

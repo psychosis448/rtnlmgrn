@@ -1,53 +1,44 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <article>
-    <h1>{{ page.title }}</h1>
-    <div class="entry-metadata">
-        <ul>
-            {% for author in page.authors %}
-            <li> {{ author }}</li>
-            {% endfor %}
-            <li> {{ page.date }}</li>
-            {% if page.updated %}
-            <li>󰚰 {{ page.updated }}</li>
-            {% endif %}
-        </ul>
-    </div>
+  <h1>{{ page.title }}</h1>
+  <div class="entry-metadata">
+    <ul>
+      {% for author in page.authors %}
+      <li> {{ author }}</li>
+      {% endfor %}
+      <li> {{ page.date }}</li>
+      {% if page.updated %}
+      <li>󰚰 {{ page.updated }}</li>
+      {% endif %}
+    </ul>
+  </div>
 
-    {{ page.content | safe }}
-
-    {% if page.extra.references %}
-        <section>
-            <h2>References</h2>
-            <ul>
-            {% for reference in page.extra.references %}
-                <li>
-                    <a href="{{ reference.link }}">{{ reference.title }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </section>
-    {% endif %}
-
-    {% if page.extra.bibliography %}
-        {% include "bibliography.html" %}
-    {% endif %}
-
-    {% if page.extra.folgezettel %}
-        <section>
-            <h2>Folgezettel</h2>
-            <ul>
-            {% for folgezettel in page.extra.folgezettel | sort %}
-                <li>
-                    {% set page = get_page(path="zettelkasten/" ~ folgezettel ~ ".md") %}
-                    <a href="{{ page.permalink }}">{{ page.title }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </section>
-    {% endif %}
+  {{ page.content | safe }} {% if page.extra.references %}
+  <section>
+    <h2>References</h2>
+    <ul>
+      {% for reference in page.extra.references %}
+      <li>
+        <a href="{{ reference.link }}">{{ reference.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %} {% if page.extra.bibliography %} {% include "bibliography.html" %}
+  {% endif %} {% if page.extra.folgezettel %}
+  <section>
+    <h2>Folgezettel</h2>
+    <ul>
+      {% for folgezettel in page.extra.folgezettel | sort %}
+      <li>
+        {% set page = get_page(path="zettelkasten/" ~ folgezettel ~ ".md") %}
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </article>
 
 {% endblock %}

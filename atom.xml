@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>rtnlmgrn</title>
+    <subtitle>clouds and migraines</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://rtnlmgrn.net/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://rtnlmgrn.net"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-11-08T00:00:00+00:00</updated>
+    <id>https://rtnlmgrn.net/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Web Design</title>
+        <published>2023-11-08T00:00:00+00:00</published>
+        <updated>2023-11-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            psychosis448
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://rtnlmgrn.net/zettelkasten/webdesign/"/>
+        <id>https://rtnlmgrn.net/zettelkasten/webdesign/</id>
+        
+        <content type="html" xml:base="https://rtnlmgrn.net/zettelkasten/webdesign/">&lt;!--
+    NOTE: an epigraph is a phrase, quotation, or poem that is set at the beginning of a document, monograph or section thereof.
+    c.f. https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Epigraph_(literature)
+--&gt;
+&lt;section class=&quot;epigraph&quot;&gt;
+  &lt;figure&gt;
+    &lt;blockquote cite=&quot;https:&amp;#x2F;&amp;#x2F;brutalist-web.design&amp;#x2F;&quot;&gt;A website&amp;#x27;s materials aren&amp;#x27;t HTML tags, CSS, or JavaScript code. Rather, they are its content and the context in which it&amp;#x27;s consumed. A website is for a visitor, using a browser, running on a computer to read, watch, listen, or perhaps to interact. A website that embraces Brutalist Web Design is raw in its focus on content, and prioritization of the website visitor.&lt;&#x2F;blockquote&gt;
+    
+    &lt;figcaption&gt;
+      &amp;mdash; David Copeland, &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;brutalist-web.design&amp;#x2F;&quot;&gt;&lt;cite&gt;Guidelines for Brutalist Web Design&lt;&#x2F;cite&gt;&lt;&#x2F;a&gt;
+    &lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+&lt;&#x2F;section&gt;
+</content>
+        
+    </entry>
+</feed>
